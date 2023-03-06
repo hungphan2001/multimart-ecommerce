@@ -7,8 +7,7 @@ import { Link } from 'react-router-dom';
 import products from '../../assets/data/products';
 const ProductCard = ({item}) => {
   return (
-    products.map((item,index)=>(
-        <Col lg='3' md='4'>
+        <Col lg='3' md='4' className='mb-2'>
         <div className="product__item">
             <div className="product__img">
                 <motion.img whileHover={{scale:0.9}}src={item.imgUrl} alt="" />
@@ -26,8 +25,6 @@ const ProductCard = ({item}) => {
             </div>
         </div>
         </Col>
-    ))
-    
   )
 }
 
