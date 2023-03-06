@@ -9,6 +9,9 @@ import '../styles/home.css'
 import Services from '../services/Services';
 import products from '../assets/data/products';
 import ProductsList from '../components/UI/ProductsList';
+
+import counterImg from '../assets/images/counter-timer-img.png';
+import Clock from '../components/UI/Clock'
 const Home = () => {
   const [trendingProducts,setTrendingProducts]= useState([]);
   const [bestSalesProducts,setbestSalesProducts]= useState([]);
@@ -68,6 +71,23 @@ const Home = () => {
           <h2 className="section__title">Best Sales</h2>
         </Col>
         <ProductsList data={bestSalesProducts}></ProductsList>
+      </Row>
+    </Container>
+   </section>
+   <section className="timer__count">
+    <Container>
+      <Row>
+        <Col lg='6' md='6'>
+          <div className="clock__top-content">
+            <h4 className='text-white fs-6 mb-2'>Limited</h4>
+            <h3 className='text-white fs-5 mb-3'>Quality Arm</h3>
+          </div>
+          <Clock></Clock>
+          <motion.button whileTap={{scale:1.2}}className="buy__btn store__tbn">Visit store</motion.button>
+        </Col>
+        <Col lg='6' md='6' className='text-end'>
+          <img src={counterImg} alt=''></img>
+        </Col>
       </Row>
     </Container>
    </section>
