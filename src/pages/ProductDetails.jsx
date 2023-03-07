@@ -111,10 +111,10 @@ const ProductDetails = () => {
                 <div className="review__wrapper">
                   <ul>
                     {
-                      reviews.map((item, index) => (
+                      reviews?.map((item, index) => (
                         <li key={index} className='mb-4'>
                           <h6>Hung Phan</h6>
-                          <span>{item.rating}(rating)</span>
+                          <span>{item.rating} ( rating)</span>
                           <p>{item.text}</p></li>
                       ))
                     }
@@ -123,7 +123,10 @@ const ProductDetails = () => {
                     <h4>Leave ypur experience</h4>
                     <form action="" onSubmit={submitHander}>
                       <div className="form__group">
-                        <input type="text" placeholder='Enter name' ref={reviewUser} />
+                        <input type="text" 
+                        placeholder='Enter name' 
+                        ref={reviewUser}
+                        required />
                       </div>
                       <div className="form__group d-flex align-items-center gap-5 rating__group">
                         <motion.span whileTap={{scale:1.2}} onClick={() => setRating(1)}>1<i class="ri-star-s-fill"></i></motion.span>
@@ -136,7 +139,8 @@ const ProductDetails = () => {
                       <div className="form__group">
                         <textarea ref={reviewMsg}
                           rows={4} type="text"
-                          placeholder='Review Mess' />
+                          placeholder='Review Mess'
+                          required />
                       </div>
                       <motion.button whileTap={{scale:1.2}}
                       type='submit' className="buy__btn">Submit</motion.button>
