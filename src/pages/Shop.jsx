@@ -20,6 +20,11 @@ const Shop = () => {
         setProductsData(filterProducts)
        }
 
+       if(filterValue==='chair'){
+        const filterProducts = products.filter((item)=>item.category==='chair');
+        setProductsData(filterProducts)
+       }
+
        if(filterValue==='watch'){
         const filterProducts = products.filter((item)=>item.category==='watch');
         setProductsData(filterProducts)
