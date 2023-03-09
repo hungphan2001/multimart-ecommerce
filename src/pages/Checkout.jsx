@@ -47,9 +47,9 @@ const Checkout = () => {
             <h6>Shipping:
               <br></br>free shipping<span>$0</span></h6>
             <h4>Total Cost:<span>${totalAmount}</span></h4>
-          </div>
-          <button className="buy__btn auth__btn w-100">
+            <button className="buy__btn auth__btn w-100">
               Place an order</button>
+          </div>
         </Col>
       </Row>
         </Container>
