@@ -46,6 +46,7 @@ const AddProducts = () => {
             shortDesc:enterShortDesc,
             description:enterDescription,
             price:enterPrice,
+            category:enterCategory,
             imgUrl:downloadURL,
           })
         })
