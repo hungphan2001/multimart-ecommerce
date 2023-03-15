@@ -5,7 +5,7 @@ import { collection,onSnapshot } from 'firebase/firestore'
 const useGetData = collectName => {
 
     const [data,setData] = useState([]);
-    const [loading,setLoading] = useState([]);
+    const [loading,setLoading] = useState(true);
     const collectionRef = collection(db,collectName);
     
     useEffect(()=>{
