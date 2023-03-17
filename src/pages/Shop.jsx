@@ -2,45 +2,43 @@ import React ,{useState} from 'react'
 import CommonSection from '../components/UI/CommonSection';
 import Helmet from '../components/Helmet/Helmet';
 import { Container,Col,Row } from 'reactstrap';
-//import products from '../assets/data/products';
+import products from '../assets/data/products';
 import ProductsList from '../components/UI/ProductsList'
 import '../styles/shop.css'
-import useGetData from '../custom-hooks/useGetData';
 const Shop = () => {
 
-  const {data:productsData,loading} = useGetData('products');
-  const [setProductsData] = useState() 
+  const [productsData,setProductsData] = useState(products)
   const handerFilter= (e) =>{
        const filterValue = e.target.value;
        if(filterValue==='sofa'){
-        const filterProducts = productsData.filter((item)=>item.category==='sofa');
+        const filterProducts = products.filter((item)=>item.category==='sofa');
         setProductsData(filterProducts)
        }
 
        if(filterValue==='mobile'){
-        const filterProducts = productsData.filter((item)=>item.category==='mobile');
+        const filterProducts = products.filter((item)=>item.category==='mobile');
         setProductsData(filterProducts)
        }
 
        if(filterValue==='chair'){
-        const filterProducts = productsData.filter((item)=>item.category==='chair');
+        const filterProducts = products.filter((item)=>item.category==='chair');
         setProductsData(filterProducts)
        }
 
        if(filterValue==='watch'){
-        const filterProducts = productsData.filter((item)=>item.category==='watch');
+        const filterProducts = products.filter((item)=>item.category==='watch');
         setProductsData(filterProducts)
        }
 
        if(filterValue==='wireless'){
-        const filterProducts = productsData.filter((item)=>item.category==='wireless');
+        const filterProducts = products.filter((item)=>item.category==='wireless');
         setProductsData(filterProducts)
        }
   }
 
   const handerSearch = e =>{
     const searchTerm = e.target.value;
-    const searchProducts = productsData.filter(item=>item.productName.toLowerCase().includes(searchTerm.toLowerCase()))
+    const searchProducts = products.filter(item=>item.productName.toLowerCase().includes(searchTerm.toLowerCase()))
     setProductsData(searchProducts)
   }
   return (
@@ -61,7 +59,7 @@ const Shop = () => {
               </select>
             </div>
           </Col>
-          {/* <Col lg='3' md='6' className='text-end'>
+          <Col lg='3' md='6' className='text-end'>
           <div className="filter__widget">
               <select >
               <option>Sort By</option>
@@ -69,7 +67,7 @@ const Shop = () => {
                 <option value="descending">Descending</option>
               </select>
             </div>
-          </Col> */}
+          </Col>
           
           <Col lg='6' md='12'>
             <div className="search__box">
@@ -85,8 +83,8 @@ const Shop = () => {
     <section className='pt-0'>
       <Container>
         <Row>
-         {
-            loading ? <h1 className='text-center fs-4'>Loading...</h1>
+          {
+            productsData.length===0 ? <h1 className='text-center fs-4'>No products are found</h1>
             : <ProductsList data={productsData}></ProductsList>
           }
         </Row>
