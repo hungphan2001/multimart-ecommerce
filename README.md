@@ -68,3 +68,23 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Preview
+
+!["multimart-ecommerce"](https://raw.githubusercontent.com/hungphan2001/multimart-ecommerce/master/img/home1.png "multimart-ecommerce")
+
+!["multimart-ecommerce"](https://raw.githubusercontent.com/hungphan2001/multimart-ecommerce/master/img/home2.png "multimart-ecommerce")
+
+!["multimart-ecommerce"](https://raw.githubusercontent.com/hungphan2001/multimart-ecommerce/master/img/home3.png "multimart-ecommerce")
+
+!["multimart-ecommerce"](https://raw.githubusercontent.com/hungphan2001/multimart-ecommerce/master/img/login.png "multimart-ecommerce")
+
+!["multimart-ecommerce"](https://raw.githubusercontent.com/hungphan2001/multimart-ecommerce/master/img/shop.png "multimart-ecommerce")
+
+!["multimart-ecommerce"](https://raw.githubusercontent.com/hungphan2001/multimart-ecommerce/master/img/detail.png "multimart-ecommerce")
+
+!["multimart-ecommerce"](https://raw.githubusercontent.com/hungphan2001/multimart-ecommerce/master/img/cart.png "multimart-ecommerce")
+
+!["multimart-ecommerce"](https://raw.githubusercontent.com/hungphan2001/multimart-ecommerce/master/img/addproduct.png "multimart-ecommerce")
+
+!["multimart-ecommerce"](https://raw.githubusercontent.com/hungphan2001/multimart-ecommerce/master/img/dashboard.png "multimart-ecommerce")
