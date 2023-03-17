@@ -4,8 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { db } from '../firebase-config';
 import {doc,deleteDoc} from 'firebase/firestore';
-import useGetData
- from '../custom-hooks/useGetData';
+import useGetData from '../custom-hooks/useGetData';
 const AllProducts = () => {
 
   const {data:productsData,loading} = useGetData('products');
@@ -39,7 +38,7 @@ const AllProducts = () => {
                   <td>
                     <img src={item.imgUrl} alt=''></img>
                   </td>
-                  <td>{item.title}</td>
+                  <td>{item.productName}</td>
                   <td>{item.category}</td>
                   <td>${item.price}</td>
                   <td>
